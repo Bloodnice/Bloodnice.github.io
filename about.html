@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+      <script rel="stylesheet" src="js/Chart.js"></script>
+
+    <title>О нас</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js "></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="f1">
+            <a class="navbar-brand" href="index.html">PR<i class="fa fa-circle"></i>GER </a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Домой</a></li>
+            <li class="active"><a href="about.html">О великих</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div id="blue">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h4>Узнай больше о программировании</h4>
+				<p>Это важные люди</p>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!--  bluewrap -->
+
+
+	<div class="container w">
+		<div class="row centered">
+			<br><br>
+			<div class="col-lg-3">
+				<img class="img-circle" src="img/Konrad.jpg" width="150" height="150" alt="">
+				<h4>Цузе Конрад</h4>
+				<p>Немецкий инженер, пионер компьютеростроения. Наиболее известен как создатель первого действительно работающего программируемого компьютера (1941) и первого языка программирования высокого уровня.</p>
+				<p><a href="https://ru.wikipedia.org/wiki/Цузе,_Конрад" target="_blank">@Цузе Конрад</a></p>
+			</div><!-- col-lg-3 -->
+
+			<div class="col-lg-3">
+				<img class="img-circle" src="img/Ada.jpg" width="150" height="150" alt="">
+				<h4>Лавлейс Ада</h4>
+				<p> Aнглийский математик. Известна прежде всего созданием описания вычислительной машины, проект которой был разработан Чарльзом Бэббиджем. Ввела в употребление термины «цикл» и «рабочая ячейка», считается первым программистом. </p>
+				<p><a href="https://ru.wikipedia.org/wiki/Лавлейс,_Ада" target="_blank">@Лавлейс Ада</a></p>
+			</div><!-- col-lg-3 -->
+
+			<div class="col-lg-3">
+				<img class="img-circle" src="img/Babbege.jpg" width="150" height="150" alt="">
+				<h4>Бэббидж Чарльз</h4>
+				<p>английский математик, изобретатель первой аналитической вычислительной машины.Труды по теории функций, механизации счёта в экономике. Сконструировал и построил (1820-22) машину для табулирования. </p>
+				<p><a href="https://ru.wikipedia.org/wiki/Бэббидж,_Чарлз" target="_blank">@Беббидж Чарльз</a></p>
+			</div><!-- col-lg-3 -->
+
+			<div class="col-lg-3">
+				<img class="img-circle" src="img/jozeph.jpg" width="150" height="150" alt="">
+				<h4>Жаккар Жозеф Мари</h4>
+				<p>французский изобретатель ткацкого станка для узорчатых материй (известного как машина Жаккарда).Принцип машины Жаккара применён во многих аппаратах, например в аристофоне, механическом тапёре, одном из телеграфов Уитстона.</p>
+				<p><a href="https://ru.wikipedia.org/wiki/Жаккар,_Жозеф_Мари" target="_blank">@Жаккар Жозеф Мари</a></p>
+			</div><!-- col-lg-3 -->
+
+		</div><!-- row -->
+		<br>
+		<br>
+	</div><!-- container -->
+
+
+	<!-- PORTFOLIO SECTION -->
+	<div id="dg">
+		<div class="container">
+			<div class="row centered">
+				<h3>Наши умения</h3>
+				<br>
+
+			<!-- First Chart -->
+			<div class="col-lg-3">
+				<canvas id="canvas" height="130" width="130"></canvas>
+				<br>
+				<script>
+					var doughnutData = [
+							{
+								value: 70,
+								color:"#3498db"
+							},
+							{
+								value : 30,
+								color : "#ecf0f1"
+							}
+						];
+						var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+				</script>
+				<p><b>Дизайн & Бренд</b></p>
+				<p><small>Тут по задумке должен быть написан важный и познавательный текст. Искать и сочинять который сейчас не имеет смысла.</small></p>
+			</div><!-- /col-lg-3 -->
+
+			<!-- Second Chart -->
+			<div class="col-lg-3">
+				<canvas id="canvas2" height="130" width="130"></canvas>
+				<br>
+				<script>
+					var doughnutData = [
+							{
+								value: 90,
+								color:"#3498db"
+							},
+							{
+								value : 10,
+								color : "#ecf0f1"
+							}
+						];
+						var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
+				</script>
+				<p><b>Веб разработка</b></p>
+				<p><small>Тут по задумке должен быть написан важный и познавательный текст. Искать и сочинять который сейчас не имеет смысла.</small></p>
+			</div><!-- /col-lg-3 -->
+
+			<!-- Third Chart -->
+			<div class="col-lg-3">
+				<canvas id="canvas3" height="130" width="130"></canvas>
+				<br>
+				<script>
+					var doughnutData = [
+							{
+								value: 50,
+								color:"#3498db"
+							},
+							{
+								value : 50,
+								color : "#ecf0f1"
+							}
+						];
+						var myDoughnut = new Chart(document.getElementById("canvas3").getContext("2d")).Doughnut(doughnutData);
+				</script>
+				<p><b>Услуги Seo</b></p>
+				<p><small>Тут по задумке должен быть написан важный и познавательный текст.. Искать и сочинять который сейчас не имеет смысла.</small></p>
+			</div><!-- /col-lg-3 -->
+
+			<!-- Fourth Chart -->
+			<div class="col-lg-3">
+				<canvas id="canvas4" height="130" width="130"></canvas>
+				<br>
+				<script>
+					var doughnutData = [
+							{
+								value: 80,
+								color:"#3498db"
+							},
+							{
+								value : 20,
+								color : "#ecf0f1"
+							}
+						];
+						var myDoughnut = new Chart(document.getElementById("canvas4").getContext("2d")).Doughnut(doughnutData);
+				</script>
+				<p><b>Печать</b></p>
+				<p><small>Тут по задумке должен быть написан важный и познавательный текст. Искать и сочинять который сейчас не имеет смысла.</small></p>
+			</div><!-- /col-lg-3 -->
+
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- DG -->
+
+
+
+
+	<div id="r">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h4><b>МЫ СОТРУДНИКИ. БРЕНДЫ - НАШИ СУБЪЕКТЫ. ДИЗАЙН - НАШ ГОЛОС.</b></h4>
+					<p>Мы считаем, что идеи приходят от всех, везде.Каждый из наших сотрудников агентства является самостоятельным дизайнером. И есть несколько принципов, в которые мы верим. Эти принципы побуждают нас, мотивируют нас и в конечном итоге помогают нам переопределить силу дизайна.</p>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><! -- r wrap -->
+
+
+	<!-- FOOTER -->
+	<div id="f">
+		<div class="container">
+			<div class="row cetered">
+				<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"	></i></a><a href="https://ru-ru.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a><a href="https://vk.com/" target="_blank"><i class="fa fa-vk"></i></a>
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- Footer -->
+
+
+	<!-- MODAL FOR CONTACT -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Свяжитесь с нами</h4>
+	      </div>
+	      <div class="modal-body">
+		        <div class="row centered">
+		        	<p>Мы доступны 24/7, поэтому не стесняйтесь обращаться к нам.</p>
+		        	<p>
+		        		Неизвестная улица, дом 987<br/>
+						London, UK.<br/>
+						+44 8948-4343<br/>
+						qwe123174123174@rambler.ru
+		        	</p>
+		        	<div id="mapwrap">
+		<iframe height="300" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=52.752693,22.791016&amp;spn=67.34552,156.972656&amp;z=2&amp;output=embed"></iframe>
+					</div>
+		        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">ОК</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  </body>
+</html>
