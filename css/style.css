@@ -70,7 +70,7 @@ a:hover,a:focus{
      margin-top:-10px ;
      padding-top: 20px;
      text-align: center;
-     background-attachment: inherit;
+     background-attachment: scroll;
      background-position: center center;
      min-height: 500px;
      width:100%;
